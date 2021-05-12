@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import tech.technological.emplyedmanager.entity.Employee;
 import tech.technological.emplyedmanager.repo.EmplyeeRepo;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -22,4 +23,7 @@ public class EmployeeService {
         return emplyeeRepo.save(employee);
     }
 
+    public List<Employee> getAllEmployee(){
+        return emplyeeRepo.findAll();
+    }
 }
