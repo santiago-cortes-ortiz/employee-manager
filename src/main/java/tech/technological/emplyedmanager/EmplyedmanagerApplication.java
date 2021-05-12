@@ -1,0 +1,13 @@
+package tech.technological.emplyedmanager;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EmplyedmanagerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EmplyedmanagerApplication.class, args);
+	}
+
+}
