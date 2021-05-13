@@ -40,7 +40,7 @@ public class EmployeeResouse {
         Employee employeeUpdate = employeeService.updateEmployee(employee);
         return new ResponseEntity<>(employeeUpdate, HttpStatus.OK);
     }
-
+//super
     @DeleteMapping("/delete/{idEmployee}")
     public  ResponseEntity<HttpStatus> updateEmployee(@PathVariable("idEmployee") Long idEmployee){
         employeeService.deleteEmployeeById(idEmployee);
