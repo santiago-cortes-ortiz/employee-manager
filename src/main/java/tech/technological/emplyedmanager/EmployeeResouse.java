@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import tech.technological.emplyedmanager.entity.Employee;
 import tech.technological.emplyedmanager.service.EmployeeService;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
@@ -40,7 +41,8 @@ public class EmployeeResouse {
         Employee employeeUpdate = employeeService.updateEmployee(employee);
         return new ResponseEntity<>(employeeUpdate, HttpStatus.OK);
     }
-//super
+
+    @Transactional
     @DeleteMapping("/delete/{idEmployee}")
     public  ResponseEntity<HttpStatus> updateEmployee(@PathVariable("idEmployee") Long idEmployee){
         employeeService.deleteEmployeeById(idEmployee);
