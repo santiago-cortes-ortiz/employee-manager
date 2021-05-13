@@ -1,6 +1,7 @@
 package tech.technological.emplyedmanager.exception;
 
-public class UserNotFoundException {
-    public UserNotFoundException(String s, String user_not_found) {
+public class UserNotFoundException extends RuntimeException {
+    public UserNotFoundException(String message) {
+        super(message);
     }
 }
